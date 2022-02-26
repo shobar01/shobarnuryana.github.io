@@ -1,0 +1,58 @@
+</head>
+<style>
+	body {
+		background-image: url(../img/akademik5.jpg);
+		
+	}
+
+</style>
+<body>
+<section class="ftco-section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-4 text-center mb-1">
+				<h2 class="heading-section"></h2>
+			</div>
+		</div>
+	
+		<div class="row justify-content-center">
+			<div class="col-md-7 col-lg-4">
+				<div class="login-wrap p-4 p-md-4">
+					<b><h3 class="text-center mb-2">Aplikasi Sistem Akademik</b></h3>
+					<% if (typeof msg != 'undefined') { %> 
+						<!-- <div class="alert alert-light" role="alert"> -->
+							<ul>
+							<% msg.forEach(error => { %>
+							<p1><%= msg %> </p1> 
+							<% }) %> 
+							</ul>
+						<!-- </div> -->
+						<% } %> 
+
+				<form method="POST" class="login-form" action="/login">
+				  <div class="form-group" data-validate = "Username harus diisi>
+					<label for="username">Username</label>
+					<input name="username" type="username" class="form-control"  placeholder="Username">
+				</div>
+				<div class="form-group" data-validate = "Password harus diisi">
+					<label for="password">Password</label>
+					<input name="password" type="password" class="form-control"  placeholder="Password">
+				</div>
+			<div class="form-group">
+				<button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
+			</div>
+			<div class="form-group d-md-flex">
+				<div class="w-50 text-md-left">
+					<p>Lupa Password?
+					<a href="/lupa-password">Klik disini</a></p>
+				</div>
+							<div class="w-50 text-md-right">
+								<a href="/register">Halaman Daftar</a>
+							</div>
+			</div>
+		  </form>
+		</div>
+			</div>
+		</div>
+	</div>
+</section>
